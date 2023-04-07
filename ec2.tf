@@ -7,7 +7,7 @@ resource "aws_instance" "demo1" {
   key_name               = "dev-wdp"
   user_data              = file("${path.module}/postgresql.sh")
   tags = {
-    "Name" = "postgresql-server-dev"
+    "Name" = "var.instance-name"
     "env"  = var.env
     "Team" = var.team
 
